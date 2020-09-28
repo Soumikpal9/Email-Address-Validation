@@ -2,10 +2,10 @@ package com.cg;
 import java.util.regex.*;
 import java.util.*;
 
-//UC3
+//UC4
 public class EmailAddressValidation {
 	public static void ValidateEmail(String input) {
-		String regex = "[A-Z 0-9]+[@][A-Z 0-9]+[.][A-Z]+$";
+		String regex = "[A-Z 0-9 +._-]+[@][A-Z 0-9]+[.][A-Z]+$";
 		Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher(input);
 		boolean found = matcher.find();
